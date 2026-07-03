@@ -11,11 +11,12 @@ sources:
 
 **Short answer.** EB Labs AG is a commercial subsidiary of the BSV Association focused on the exchange side of the ecosystem: maintaining relationships with digital-asset exchanges and market-makers, facilitating BSV listings, and providing consulting and development services around blockchain business models. It handles the commercial work the non-profit Association deliberately keeps at arm's length.
 
-<!-- REVIEW GATE (do not publish): every claim in this answer derives from an internal
-     mission statement — no citable public source exists yet (2026-07-03: no EB Labs site,
-     no official announcement, and no "EB Labs AG" found in the Swiss commercial register).
-     Publish only after a public source exists and is cited here, and after Exec confirms
-     the exact legal name and registration status. See HANDOFF.md gate 1. -->
+<!-- REVIEW GATE (do not publish): EB Labs is NOT YET REGISTERED — the entity is in
+     formation (confirmed by owner 2026-07-03; the eb-labs-web positioning work precedes
+     registration). Present-tense claims here become true only once registration completes.
+     Publish only after: (1) registration is complete, (2) a citable public source exists
+     (the EB Labs site or an official announcement) and is added to sources, (3) the final
+     legal name is confirmed against the commercial register. See HANDOFF.md gate 1. -->
 
 ## More detail
 
