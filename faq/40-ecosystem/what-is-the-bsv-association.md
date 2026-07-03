@@ -17,7 +17,7 @@ Public blockchains need someone to do the unglamorous shared work: maintaining r
 
 What it does, concretely: maintains and publishes the node software that transaction processors run ([[how-is-bsv-developed]]); stewards protocol standards; runs developer education (including the BSV Academy); supports ecosystem projects; and represents the technology toward institutions and policymakers.
 
-What it deliberately is *not*: an operator of the network (independent processors run it — [[who-runs-the-bsv-network]]), a financial company (it holds no customer assets and runs no venue — [[what-bsva-does-not-do]]), or a controller of the chain ([[bsva-controls-bsv]]). For commercial exchange-facing work specifically, it maintains a separate subsidiary, EB Labs, precisely to keep commercial arrangements apart from the non-profit stewardship role ([[what-is-eb-labs]]).
+What it deliberately is *not*: an operator of the network (independent processors run it — [[who-runs-the-bsv-network]]), a financial company (it holds no customer assets and runs no venue — [[what-bsva-does-not-do]]), or a controller of the chain ([[bsva-controls-bsv]]). Commercial exchange-facing work is handled separately by EB Labs, a commercial venture working alongside the Association, precisely to keep business arrangements apart from the non-profit stewardship role ([[what-is-eb-labs]]).
 
 Why the structure matters to an ordinary user: when ecosystem events happen — a venue closes ([[orange-gateway-mica]]), an app shuts down — knowing what the Association actually does (and doesn't) tells you what it could and couldn't have decided ([[ecosystem-who-is-who]]).
 

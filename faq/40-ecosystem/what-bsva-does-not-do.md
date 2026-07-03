@@ -15,7 +15,7 @@ sources:
 
 The concrete list, because vagueness is how confusion spreads:
 
-- **Exchanges**: it doesn't own or operate any venue, doesn't decide who lists or delists BSV ([[what-is-a-listing]], [[why-do-exchanges-delist]]), and doesn't control any exchange's licensing outcome — those rest with the venue and its regulator ([[orange-gateway-mica]], [[why-do-licenses-matter]]). Its subsidiary EB Labs *facilitates* exchange relationships commercially ([[what-is-eb-labs]]); facilitation is not decision power.
+- **Exchanges**: it doesn't own or operate any venue, doesn't decide who lists or delists BSV ([[what-is-a-listing]], [[why-do-exchanges-delist]]), and doesn't control any exchange's licensing outcome — those rest with the venue and its regulator ([[orange-gateway-mica]], [[why-do-licenses-matter]]). EB Labs, the commercial venture alongside the Association, *facilitates* exchange relationships ([[what-is-eb-labs]]); facilitation is not decision power.
 - **Your coins**: it has no access to anyone's wallets or exchange accounts, cannot freeze or recover funds ([[lost-keys-recovery]]), and never asks for keys — anyone doing so in its name is a scammer ([[keeping-bsv-safe]]).
 - **The network**: transaction processing is done by independent operators ([[who-runs-the-bsv-network]]); the Association maintains software those operators may choose to run, which is influence, not control ([[bsva-controls-bsv]]). It cannot reverse a transaction or censor an address.
 - **Markets**: it doesn't set transaction fees ([[what-are-fees]]), doesn't make markets, and doesn't comment on price — nor does this FAQ ([[no-price-talk]]).

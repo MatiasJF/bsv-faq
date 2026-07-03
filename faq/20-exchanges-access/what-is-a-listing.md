@@ -15,7 +15,7 @@ sources:
 
 Getting listed involves the exchange integrating the coin's technology (wallets, deposits, withdrawals — for BSV this includes handling its high-throughput design), satisfying its own compliance review, and often ongoing commercial arrangements around liquidity — ensuring there are enough standing buy/sell orders for smooth trading, sometimes with specialist firms called market-makers.
 
-Who does what, in the BSV ecosystem's case: exchanges decide listings; ecosystem organizations can *facilitate* — providing technical documentation, integration support, and commercial coordination. That facilitation role is why the BSV Association maintains a dedicated subsidiary, EB Labs, for exchange relationships ([[what-is-eb-labs]]) — while the decision always remains the exchange's own.
+Who does what, in the BSV ecosystem's case: exchanges decide listings; ecosystem organizations can *facilitate* — providing technical documentation, integration support, and commercial coordination. In BSV's case that facilitation is handled by EB Labs, a commercial venture working alongside the BSV Association ([[what-is-eb-labs]]) — while the decision always remains the exchange's own.
 
 Delistings are the same decision in reverse ([[why-do-exchanges-delist]]): commercial or regulatory, made by the venue. Because listings come and go, where BSV trades varies by time and by country ([[where-to-get-bsv]]).
 

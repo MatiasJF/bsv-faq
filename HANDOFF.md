@@ -6,7 +6,7 @@ Status: content complete (41 questions, lint clean), QA review run, **Internal**
 
 A human owner reads the corpus — at minimum the highest-risk files — and approves:
 - `faq/70-incidents/orange-gateway-mica.md` — the incident framing (accuracy + tone; it names a company and a regulator)
-- `faq/40-ecosystem/what-is-eb-labs.md` — **hard-blocked until registration.** EB Labs is not yet registered; the entity is in formation and the eb-labs-web positioning work deliberately precedes it (owner-confirmed 2026-07-03). Publish this answer only after: registration completes, the final legal name is confirmed against the commercial register, and a citable public source (the EB Labs site or an official announcement) exists and is cited. Keep this answer consistent with the approved eb-labs-web copy
+- `faq/40-ecosystem/what-is-eb-labs.md` — **hard-blocked until EB Labs exists publicly.** EB Labs is being established and its legal structure is not yet decided (owner-confirmed 2026-07-03), so the answer describes only the business role (products/services alongside BSVA, exchange relationships) with no legal/structural claims. Publish only once a citable public source exists (the EB Labs site or an official announcement) and is cited. Keep consistent with the approved eb-labs-web copy
 - `faq/00-basics/bitcoin-vs-bsv.md` and `how-did-bsv-start.md` — the BTC/BSV neutrality stance
 - `faq/40-ecosystem/what-bsva-does-not-do.md` — speaks for what BSVA does/doesn't do; the Association should confirm its own description
 
