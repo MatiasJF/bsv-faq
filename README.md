@@ -33,6 +33,7 @@ Every file follows the format contract in `schema/question.md`: YAML frontmatter
 This repo is the **single source of truth**; skins consume it:
 
 - **Chatbot**: one file per question = one retrieval chunk. See `flavours/chatbot.md`.
+  A working retrieval-only demo lives in `flavours/chatbot-demo/` (`python3 build.py && open index.html`).
 - **Branded versions** (EB Labs, partner sites, marketing): may restyle, may select subsets, may never alter facts or neutrality. Rules in `flavours/branding.md`.
 
 ## Editing rules

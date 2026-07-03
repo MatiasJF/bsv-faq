@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BSV Plain Answers — chatbot demo</title>
+<style>
+  :root {
+    --bg: #f4f5f8; --panel: #ffffff; --ink: #22242a; --muted: #6b6f7a;
+    --accent: #2743c7; --accent-soft: #e8ecfb; --border: #e2e4ea;
+    --user: #2743c7; --radius: 14px;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    font: 16px/1.55 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg); color: var(--ink);
+    display: flex; flex-direction: column; height: 100vh;
+  }
+  header {
+    background: var(--panel); border-bottom: 1px solid var(--border);
+    padding: 14px 22px; display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
+  }
+  header h1 { font-size: 17px; font-weight: 650; }
+  header .mode {
+    font-size: 11px; letter-spacing: .06em; text-transform: uppercase;
+    color: var(--muted); border: 1px solid var(--border); border-radius: 20px; padding: 2px 10px;
+  }
+  header .note { font-size: 12.5px; color: var(--muted); }
+  #chat { flex: 1; overflow-y: auto; padding: 26px 0 12px; }
+  .row { max-width: 780px; margin: 0 auto 16px; padding: 0 20px; display: flex; }
+  .row.user { justify-content: flex-end; }
+  .bubble {
+    max-width: 86%; padding: 12px 16px; border-radius: var(--radius);
+    background: var(--panel); border: 1px solid var(--border);
+  }
+  .row.user .bubble { background: var(--user); color: #fff; border: none; }
+  .bubble h3 { font-size: 15.5px; margin-bottom: 6px; color: var(--accent); }
+  .bubble p { margin: 8px 0; }
+  .bubble ul { margin: 8px 0 8px 22px; }
+  .bubble a { color: var(--accent); }
+  .meta { font-size: 12px; color: var(--muted); margin-top: 10px; }
+  .badge {
+    display: inline-block; font-size: 10.5px; letter-spacing: .05em; text-transform: uppercase;
+    background: #fdecec; color: #a33; border-radius: 4px; padding: 1px 7px; margin-left: 8px; vertical-align: 2px;
+  }
+  details { margin-top: 8px; }
+  summary { cursor: pointer; color: var(--accent); font-size: 14px; user-select: none; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .chip {
+    font-size: 13px; background: var(--accent-soft); color: var(--accent);
+    border: none; border-radius: 20px; padding: 6px 13px; cursor: pointer; font-family: inherit;
+  }
+  .chip:hover { background: #d9e0f8; }
+  .srcs { margin-top: 10px; font-size: 13px; }
+  .srcs div { color: var(--muted); font-size: 12px; margin-bottom: 2px; }
+  form {
+    background: var(--panel); border-top: 1px solid var(--border); padding: 14px 20px 18px;
+  }
+  .inputwrap { max-width: 780px; margin: 0 auto; display: flex; gap: 10px; }
+  input[type=text] {
+    flex: 1; font: inherit; padding: 11px 16px; border: 1.5px solid var(--border);
+    border-radius: 24px; outline: none; background: var(--bg);
+  }
+  input[type=text]:focus { border-color: var(--accent); background: #fff; }
+  button[type=submit] {
+    font: inherit; font-weight: 600; background: var(--accent); color: #fff;
+    border: none; border-radius: 24px; padding: 0 22px; cursor: pointer;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>BSV Plain Answers</h1>
+  <span class="mode">chatbot demo · __BUILD_MODE__ build</span>
+  <span class="note">Answers come verbatim from the vetted FAQ corpus — nothing is generated.</span>
+</header>
+<div id="chat"></div>
+<form id="form" autocomplete="off">
+  <div class="inputwrap">
+    <input type="text" id="q" placeholder="Ask about BSV — e.g. “what happens if my exchange closes?”">
+    <button type="submit">Ask</button>
+  </div>
+</form>
+
+<script>
+const DATA = /*__DATA__*/[];
+const byId = Object.fromEntries(DATA.map(d => [d.id, d]));
+
+/* ---------- retrieval ---------- */
+const STOP = new Set(("a an and are as at be but by can could do does for from has have how i if in is it its "+
+  "me my of on or so that the this to was we what when where which who why will with you your").split(" "));
+const SYN = { btc:"bitcoin", coins:"coin", cost:"fees", costs:"fees", cheap:"fees", buy:"get",
+  bought:"get", sell:"exchange", trade:"exchange", trading:"exchange", closed:"closes",
+  shut:"closes", shutdown:"closes", licence:"license", licensed:"license", regulator:"regulates",
+  regulators:"regulates", eu:"mica", europe:"mica", iceland:"orange", hacked:"safe", stolen:"safe",
+  dead:"dead", scam:"misconception" };
+const PRICE = /\b(price|prices|worth|invest|investment|investing|prediction|predictions|pump|moon|profit|profits|go up|going up)\b/i;
+
+function tokens(s) {
+  return s.toLowerCase().replace(/[^a-z0-9\s-]/g, " ").split(/\s+/)
+    .filter(t => t && !STOP.has(t)).map(t => SYN[t] || t);
+}
+DATA.forEach(d => {
+  d._q = tokens(d.question);
+  d._t = d.tags.map(t => t.toLowerCase());
+  d._s = tokens(d.short);
+  d._b = tokens(d.detail);
+});
+
+function search(query) {
+  if (PRICE.test(query) && byId["no-price-talk"]) {
+    return { top: byId["no-price-talk"], others: [] };
+  }
+  const qt = tokens(query);
+  if (!qt.length) return { top: null, others: [] };
+  const scored = DATA.map(d => {
+    let s = 0;
+    for (const t of qt) {
+      if (d._q.includes(t)) s += 4;
+      if (d._t.some(tag => tag.includes(t))) s += 3;
+      if (d._s.includes(t)) s += 2;
+      else if (d._b.includes(t)) s += 1;
+      if (d.id.includes(t)) s += 2;
+    }
+    const ql = query.toLowerCase().replace(/[?.!]/g, "").trim();
+    if (ql && d.question.toLowerCase().includes(ql)) s += 8;
+    return [s, d];
+  }).filter(([s]) => s > 0).sort((a, b) => b[0] - a[0]);
+  if (!scored.length || scored[0][0] < 4) return { top: null, others: scored.slice(0, 3).map(x => x[1]) };
+  return { top: scored[0][1], others: scored.slice(1, 4).map(x => x[1]) };
+}
+
+/* ---------- minimal markdown ---------- */
+function esc(s) { return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
+function inline(s) {
+  return s
+    .replace(/\[\[([\w-]+)\]\]/g, (_, id) =>
+      byId[id] ? `<button class="chip" data-ask="${id}">${esc(byId[id].question)}</button>` : "")
+    .replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>")
+    .replace(/\[(.+?)\]\((https?:[^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+}
+function md(text) {
+  const blocks = text.split(/\n\n+/);
+  return blocks.map(b => {
+    const lines = b.split("\n");
+    if (lines.every(l => l.trim().startsWith("- "))) {
+      return "<ul>" + lines.map(l => "<li>" + inline(esc(l.trim().slice(2))) + "</li>").join("") + "</ul>";
+    }
+    if (b.startsWith("### ")) return "<p><strong>" + inline(esc(b.slice(4))) + "</strong></p>";
+    return "<p>" + inline(esc(b)) + "</p>";
+  }).join("");
+}
+
+/* ---------- chat ---------- */
+const chat = document.getElementById("chat");
+function addRow(cls, html) {
+  const row = document.createElement("div");
+  row.className = "row " + cls;
+  row.innerHTML = `<div class="bubble">${html}</div>`;
+  chat.appendChild(row);
+  chat.scrollTop = chat.scrollHeight;
+  return row;
+}
+
+function chipRow(docs, label) {
+  if (!docs.length) return "";
+  const chips = docs.map(d => `<button class="chip" data-ask="${d.id}">${esc(d.question)}</button>`).join("");
+  return `<div class="meta">${label}</div><div class="chips">${chips}</div>`;
+}
+
+function answer(doc, others) {
+  const gated = doc.gated ? '<span class="badge">internal — publication-gated</span>' : "";
+  let html = `<h3>${esc(doc.question)}${gated}</h3><p>${inline(esc(doc.short))}</p>`;
+  if (doc.detail) html += `<details><summary>More detail</summary>${md(doc.detail)}</details>`;
+  if (doc.sources.length) {
+    html += `<div class="srcs"><div>Sources</div>` + doc.sources.map(s => {
+      const m = s.match(/^https?:/) ? `<a href="${esc(s)}" target="_blank" rel="noopener">${esc(s)}</a>` : esc(s);
+      return `<div>· ${m}</div>`;
+    }).join("") + `</div>`;
+  }
+  html += `<div class="meta">As of ${esc(doc.updated)} · category ${esc(doc.category)}</div>`;
+  const related = doc.refs.map(id => byId[id]).filter(Boolean)
+    .concat(others).filter((d, i, a) => d.id !== doc.id && a.findIndex(x => x.id === d.id) === i).slice(0, 3);
+  html += chipRow(related, "Related");
+  addRow("bot", html);
+}
+
+function noAnswer(near) {
+  let html = `<p>I don't have a vetted answer for that yet — and this bot only answers from the reviewed FAQ, so I won't improvise.</p>`;
+  html += chipRow(near.length ? near : pick(3), near.length ? "Closest matches" : "You could try");
+  addRow("bot", html);
+}
+
+function pick(n) {
+  const ids = ["what-is-bsv", "exchange-closes-my-funds", "what-is-mica", "what-is-the-bsv-association",
+               "keeping-bsv-safe", "orange-gateway-mica"];
+  return ids.map(id => byId[id]).filter(Boolean).slice(0, n);
+}
+
+function ask(text) {
+  addRow("user", esc(text));
+  const { top, others } = search(text);
+  setTimeout(() => { top ? answer(top, others) : noAnswer(others); }, 120);
+}
+
+document.getElementById("form").addEventListener("submit", e => {
+  e.preventDefault();
+  const q = document.getElementById("q");
+  if (q.value.trim()) ask(q.value.trim());
+  q.value = "";
+});
+chat.addEventListener("click", e => {
+  const id = e.target.dataset && e.target.dataset.ask;
+  if (id && byId[id]) ask(byId[id].question);
+});
+
+/* greeting */
+addRow("bot",
+  `<p><strong>Hi — I answer questions about BSV in plain language.</strong> ` +
+  `Every answer is quoted verbatim from a reviewed FAQ (${DATA.length} answers, with sources). ` +
+  `If something isn't covered, I'll say so rather than guess. I don't discuss price.</p>` +
+  chipRow(pick(4), "Try one of these"));
+</script>
+</body>
+</html>
