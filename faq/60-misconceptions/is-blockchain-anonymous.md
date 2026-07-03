@@ -15,9 +15,9 @@ sources:
 
 Where the linkage comes from in practice: licensed exchanges verify identity ([[why-do-licenses-matter]]), so coins moving between your verified account and your addresses connect the dots for anyone with lawful access to exchange records; merchants link addresses to deliveries and invoices; and chain analysis — following the public graph of transactions — is a mature industry serving investigators. Any address you reuse accumulates a visible history that's one identification away from being *your* visible history.
 
-Two honest framings follow. For privacy: treat on-chain activity like activity in public — lawful privacy practices exist (fresh addresses per payment, keeping sensitive data off-chain, [[data-on-chain]]), but the ledger is not a hiding place. For the "crypto is for criminals" narrative: a permanent public record that strengthens over time is, if anything, hostile terrain for crime — which is why the traceability of public blockchains keeps featuring in successful prosecutions.
+The practical framing for privacy: treat on-chain activity like activity in public. Lawful privacy practices exist — fresh addresses per payment, keeping sensitive data off-chain with only fingerprints anchored ([[data-on-chain]]) — but the ledger is not a hiding place, and investigators do use its traceability.
 
-BSV's design leans into this transparency deliberately — auditability and regulatory workability are treated as features of an honest payment system ([[what-is-bsv]]), not flaws to engineer away.
+BSV's stated design position is to keep this transparency rather than obscure it, treating auditability and compatibility with regulation as goals of the system ([[what-is-bsv]]). Other blockchain projects make different design choices about privacy; describing that spectrum is beyond this FAQ's scope.
 
 ## Sources
 

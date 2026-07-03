@@ -9,7 +9,7 @@ sources:
   - https://bsvblockchain.org/
 ---
 
-**Short answer.** Independent transaction processors — often called miners or node operators — run the network. They are separate businesses, in various countries, that operate the machines validating transactions and building blocks, earning fees and newly issued coins for it. No permission is needed to join, and no single party (including the BSV Association) runs the network itself.
+**Short answer.** Independent transaction processors — often called miners or node operators, a "node" being a computer running the network's software — run the network. They are separate businesses, in various countries, that operate the machines validating transactions and building blocks, earning fees and newly issued coins for it. No permission is needed to join, and no single party (including the BSV Association) runs the network itself.
 
 ## More detail
 

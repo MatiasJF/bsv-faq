@@ -9,7 +9,7 @@ sources:
   - https://bsvblockchain.org/
 ---
 
-**Short answer.** The BSV Association (BSVA) is a Switzerland-based non-profit that stewards the BSV Blockchain: it maintains the node software and protocol standards, supports developers and education, and promotes adoption of the technology. It is a steward, not an owner — it doesn't control the network, doesn't operate exchanges, and doesn't manage anyone's coins.
+**Short answer.** The BSV Association (BSVA) is a Switzerland-based non-profit that stewards the BSV Blockchain: it maintains the node software (the program that the network's transaction processors run) and the protocol standards, supports developers and education, and promotes adoption of the technology. It is a steward, not an owner — it doesn't control the network, doesn't operate exchanges, and doesn't manage anyone's coins.
 
 ## More detail
 

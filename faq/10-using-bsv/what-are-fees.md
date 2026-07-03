@@ -15,7 +15,7 @@ sources:
 
 Fees exist because processing transactions costs real resources — machines, bandwidth, electricity. The operators who batch transactions into blocks ([[what-is-mining]]) are compensated through these fees plus newly issued coins.
 
-Why fees differ so much between chains comes down to capacity ([[what-is-scaling]]). On a network with a small fixed block size, users bid against each other for scarce space, so fees spike when the network is busy. BSV removed the protocol-level cap, so space isn't scarce and there's no bidding war — fees stay flat and tiny regardless of load.
+Why fees differ so much between chains comes down to capacity ([[what-is-scaling]]). On a network with a small fixed block size, users compete for limited space, so fees rise when the network is busy. BSV removed the protocol-level cap, so space stays abundant and fees stay flat and tiny regardless of load — the trade-off being that processing very large blocks requires industrial-scale infrastructure, a cost carried by the network's professional operators ([[who-runs-the-bsv-network]]).
 
 The practical consequence isn't just cheaper payments; it's a different set of possible applications. When a transaction costs 1/100th of a cent, it becomes economical to pay per article read, per game move, or per data record written ([[data-on-chain]]) — patterns that are impossible when each transaction costs dollars.
 

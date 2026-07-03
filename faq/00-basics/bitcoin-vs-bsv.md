@@ -9,7 +9,7 @@ sources:
   - https://bsvblockchain.org/
 ---
 
-**Short answer.** BTC and BSV share the same 2009 origin and similar core technology, but became separate networks through community splits ([[how-did-bsv-start]]) and now pursue different designs. BTC keeps blocks small and positions itself mainly as a store of value; BSV removes block-size limits and positions itself as a high-volume payments and data network. They are different coins on different chains — one cannot be sent to the other.
+**Short answer.** BTC and BSV share the same 2009 origin and similar core technology, but became separate networks through community splits ([[how-did-bsv-start]]) and now pursue different designs. BTC keeps blocks — the batches transactions are recorded in — deliberately small and positions itself mainly as a store of value; BSV removes the limit on block size and positions itself as a high-volume payments and data network. They are different coins on different chains — one cannot be sent to the other.
 
 ## More detail
 

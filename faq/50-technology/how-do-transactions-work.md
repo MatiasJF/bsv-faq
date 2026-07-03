@@ -10,7 +10,7 @@ sources:
   - https://protocol.bsvblockchain.org/
 ---
 
-**Short answer.** Your wallet builds a small signed message — "move these coins to that address" — proves it with your key, and broadcasts it to the network. Independent processors check the signature and the coins' availability, accept it within seconds, and soon include it in a block, making it a permanent part of the public record. No bank, no business hours, no borders.
+**Short answer.** Your wallet builds a small signed message — "move these coins to that address" — proves it with your key, and broadcasts it to the network. Independent processors check the signature and the coins' availability, accept it within seconds, and soon include it in a block, making it a permanent part of the public record — with no intermediary institution in the path.
 
 ## More detail
 

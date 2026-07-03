@@ -13,7 +13,7 @@ sources:
 
 ## More detail
 
-**Custodial (exchange) holding** means your coins sit in the company's wallets and your "balance" is their promise to pay you back. That promise is only as good as the company: if it is hacked, becomes insolvent, freezes withdrawals, or loses its license ([[orange-gateway-mica]]), your access depends on how that situation resolves ([[exchange-closes-my-funds]]). In exchange you get convenience — password recovery, trading, customer support.
+**Custodial (exchange) holding** means your coins sit in the company's wallets and your "balance" is their promise to pay you back. That promise is only as good as the company: if it is hacked, becomes insolvent, freezes withdrawals, or cannot obtain or keep a required license ([[orange-gateway-mica]]), your access depends on how that situation resolves ([[exchange-closes-my-funds]]). In exchange you get convenience — password recovery, trading, customer support.
 
 **Self-custody** means the keys are on your device and the coins answer to you alone ([[what-are-private-keys]]). No company failure can touch them — the coins live on the blockchain, not with any business ([[is-bsv-a-company]]). The price is responsibility: lose your recovery phrase and no one can restore access ([[lost-keys-recovery]]); get phished and no one can reverse the theft ([[keeping-bsv-safe]]).
 

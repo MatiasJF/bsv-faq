@@ -13,7 +13,7 @@ sources:
 
 ## More detail
 
-**Exchanges** are the usual entry point for buying with regular money ([[what-is-an-exchange]]). Availability is regional: an exchange must be licensed for your jurisdiction ([[why-do-licenses-matter]]), so the list of venues differs between, say, the EU, the UK, and Asia, and it changes as companies gain or lose licenses ([[orange-gateway-mica]]). Check an exchange's regulatory status for your country before depositing — and remember that coins left on an exchange are in that company's custody, not yours ([[custodial-vs-own-wallet]]).
+**Exchanges** are the usual entry point for buying with regular money ([[what-is-an-exchange]]). Availability is regional: an exchange must be licensed for your jurisdiction ([[why-do-licenses-matter]]), so the list of venues differs between, say, the EU, the UK, and Asia, and it changes as companies obtain — or fail to obtain — the licenses their markets require ([[orange-gateway-mica]]). Check an exchange's regulatory status for your country before depositing — and remember that coins left on an exchange are in that company's custody, not yours ([[custodial-vs-own-wallet]]).
 
 **Direct receipt** needs no intermediary at all: install a wallet ([[what-is-a-wallet]]), share your address or QR code, and anyone can pay you — across borders, in seconds, for a fraction of a cent ([[sending-bsv-basics]]).
 

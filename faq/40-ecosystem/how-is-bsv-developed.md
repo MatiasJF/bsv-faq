@@ -10,7 +10,7 @@ sources:
   - https://protocol.bsvblockchain.org/
 ---
 
-**Short answer.** The BSV Association maintains the main node software and documents the protocol, with the stated policy of keeping the base protocol stable ("set in stone") rather than evolving it. Publishing software isn't the same as commanding the network: the independent operators who run nodes choose whether to adopt any release ([[who-runs-the-bsv-network]]).
+**Short answer.** The BSV Association maintains the main node software — the program that network operators run to process transactions — and documents the protocol, with the stated policy of keeping the base protocol stable ("set in stone") rather than evolving it. Publishing software isn't the same as commanding the network: the independent operators who run nodes choose whether to adopt any release ([[who-runs-the-bsv-network]]).
 
 ## More detail
 

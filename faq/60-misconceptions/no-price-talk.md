@@ -19,7 +19,7 @@ What we cover instead, because these *are* factual: what fees cost and why ([[wh
 
 If you're making a financial decision, the boring advice is the honest kind: use licensed venues for your jurisdiction ([[why-do-licenses-matter]]), understand custody before depositing ([[custodial-vs-own-wallet]]), treat guaranteed-return offers as scams ([[keeping-bsv-safe]]), and consult a qualified advisor where stakes warrant it.
 
-Chatbots and branded versions built on this content inherit this rule ([[what-is-eb-labs]] and other flavours included): price questions get this rationale, not a forecast.
+Chatbots and branded versions built on this content inherit this rule as a condition of reuse: price questions get this rationale, not a forecast.
 
 ## Sources
 

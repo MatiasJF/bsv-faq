@@ -19,7 +19,7 @@ This distinction resolves a whole family of common confusions, so it's worth mak
 - **The BSV Association** ([[what-is-the-bsv-association]]) is a Swiss non-profit that maintains the protocol software and promotes the ecosystem — a steward, not an owner ([[bsva-controls-bsv]]).
 - **Businesses** — exchanges like the ones where BSV trades, wallet providers, application companies — are independent firms making their own commercial and compliance decisions ([[ecosystem-who-is-who]]).
 
-Why it matters: when a business in the ecosystem has a problem — an exchange loses a license ([[orange-gateway-mica]]), a wallet app shuts down — that is a company event, not a network event. The blockchain keeps operating, and coins in self-custody ([[custodial-vs-own-wallet]]) are unaffected ([[exchange-problems-mean-bsv-problems]]).
+Why it matters: when a business in the ecosystem has a problem — an exchange fails to obtain a required license ([[orange-gateway-mica]]), a wallet app shuts down — that is a company event, not a network event. The blockchain keeps operating, and coins in self-custody ([[custodial-vs-own-wallet]]) are unaffected ([[exchange-problems-mean-bsv-problems]]).
 
 ## Sources
 
