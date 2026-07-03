@@ -14,6 +14,8 @@ A human owner reads the corpus — at minimum the highest-risk files — and app
 
 CC BY 4.0 is **proposed**, not decided. It permits commercial reuse and modification with attribution — that's what enables the flavour model (agency materials, partner sites, chatbot). If Legal prefers no-derivatives or non-commercial, the flavour rules in `flavours/branding.md` need rewriting to match. Route through Legal.
 
+**Note:** the GitHub repo was initialized with an MIT LICENSE file (a software license — wrong instrument for a content corpus). Treat it as a placeholder: replace it with whatever Legal decides before the repo goes public.
+
 ## 3. Publication mechanics (after 1 & 2)
 
 - Run the publish gate (accuracy, voice, classification flip Internal→Public) on the whole corpus, not per-file.
