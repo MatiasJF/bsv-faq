@@ -4,22 +4,22 @@ question: "What are transaction fees, and what do they cost on BSV?"
 category: 10-using-bsv
 tags: [using, fees, transactions]
 level: beginner
-updated: 2026-07-03
+updated: 2026-07-06
 sources:
   - https://bsvblockchain.org/
 ---
 
-**Short answer.** A fee is the small amount you pay the network's transaction processors to include your transaction in the blockchain. On BSV, fees are typically a few satoshis ([[what-is-a-satoshi]]) — well under a cent — and they stay low by design, because the network's capacity grows with demand instead of rationing limited space.
+**Short answer.** A fee is a small amount you pay to the companies that process payments, so your payment gets written into the blockchain — a bit like postage on a letter. On BSV, a fee is typically a few satoshis ([[what-is-a-satoshi]]) — well under a cent. Fees stay low because the network's capacity grows with demand, instead of rationing limited space.
 
 ## More detail
 
-Fees exist because processing transactions costs real resources — machines, bandwidth, electricity. The operators who batch transactions into blocks ([[what-is-mining]]) are compensated through these fees plus newly issued coins.
+Fees exist because processing payments costs real money — machines, internet capacity, electricity. The companies that gather payments into blocks ([[what-is-mining]]) are paid through these fees plus newly issued coins.
 
-Why fees differ so much between chains comes down to capacity ([[what-is-scaling]]). On a network with a small fixed block size, users compete for limited space, so fees rise when the network is busy. BSV removed the protocol-level cap, so space stays abundant and fees stay flat and tiny regardless of load — the trade-off being that processing very large blocks requires industrial-scale infrastructure, a cost carried by the network's professional operators ([[who-runs-the-bsv-network]]).
+Why do fees differ so much between blockchains? It comes down to capacity ([[what-is-scaling]]). On a network where each block has a small fixed size, users compete for limited room, so fees rise when the network is busy. BSV removed that built-in size limit, so room stays plentiful and fees stay flat and tiny no matter how busy it gets. The trade-off: handling very large blocks takes industrial-scale equipment, a cost carried by the network's professional operators ([[who-runs-the-bsv-network]]).
 
-The practical consequence isn't just cheaper payments; it's a different set of possible applications. When a transaction costs 1/100th of a cent, it becomes economical to pay per article read, per game move, or per data record written ([[data-on-chain]]) — patterns that are impossible when each transaction costs dollars.
+The practical result is not just cheaper payments — it is a whole new set of things you can do. When a payment costs 1/100th of a cent, it becomes affordable to pay per article you read, per move in a game, or per record you save ([[data-on-chain]]). None of that is possible when each payment costs dollars.
 
-Fees are set by market dynamics between users and processors, not by any authority — the BSV Association doesn't set or collect them ([[what-bsva-does-not-do]]).
+No authority sets the fees. They are worked out in the open market between users and processors — the BSV Association does not set or collect them ([[what-bsva-does-not-do]]).
 
 ## Sources
 

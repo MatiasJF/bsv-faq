@@ -4,20 +4,20 @@ question: "An exchange trading BSV failed. Doesn't that mean BSV failed?"
 category: 60-misconceptions
 tags: [misconceptions, exchanges, network]
 level: beginner
-updated: 2026-07-03
+updated: 2026-07-06
 sources:
   - https://bsvblockchain.org/
 ---
 
-**Short answer.** No — it means a company failed. An exchange is an independent business that trades many assets ([[what-is-an-exchange]]); its solvency, licensing, and management are its own. The blockchain ran before that venue listed it and runs after it closes. The real, bounded impact is on *access* (one fewer place to trade in some region) and on *customers who held funds there* — which is a custody lesson, not a technology verdict.
+**Short answer.** No. It means a company failed. An exchange is an independent business that trades many different assets ([[what-is-an-exchange]]). Its finances, its licenses, and its management are its own affair. The BSV Blockchain was running before that company listed it, and it keeps running after the company closes. The real effects are narrower: one fewer place to trade in some region, and losses for customers who kept money at that company. That is a lesson about where you keep your funds — not a verdict on the technology.
 
 ## More detail
 
-The category error is mixing layers ([[ecosystem-who-is-who]]): venues live in the services layer; the network lives below it ([[is-bsv-a-company]]). Exchange failures happen across the industry for service-layer reasons — insolvency, mismanagement, licensing ([[why-do-licenses-matter]]) — and the mid-2026 MiCA deadline produced a wave of them across Europe affecting platforms trading *all* assets ([[what-is-mica]]), BSV venues among them ([[orange-gateway-mica]]).
+The mix-up comes from treating two separate things as one ([[ecosystem-who-is-who]]). Exchanges are services built around the network. The network itself sits underneath them ([[is-bsv-a-company]]). Exchanges fail across the whole industry, for ordinary business reasons: running out of money, poor management, or licensing trouble ([[why-do-licenses-matter]]). In mid-2026, a European licensing deadline called MiCA caused a wave of such closures across Europe ([[what-is-mica]]). It affected platforms trading *all* kinds of assets. Venues trading BSV were among them ([[orange-gateway-mica]]).
 
-A sanity check that generalizes: when a bank fails, nobody concludes the euro stopped working; when a bookstore closes, books didn't fail. The venue/asset distinction is the same here, with one sharpener — on a blockchain you can *verify* the asset layer kept running, in real time, yourself ([[is-bsv-dead]]).
+A simple comparison helps. When a bank fails, nobody concludes the euro stopped working. When a bookstore closes, books did not fail. It is the same here, with one extra point in the blockchain's favor: you can check for yourself, in real time, that the system kept running ([[is-bsv-dead]]).
 
-What such an event *does* legitimately signal: access in a region got narrower until other venues fill in ([[where-to-get-bsv]]), affected customers must run the withdrawal playbook ([[exchange-closes-my-funds]]), and everyone gets re-taught the custody lesson ([[custodial-vs-own-wallet]]). Real consequences — none of them a property of the protocol.
+Such a closure does have real effects, and it is fair to name them. Trading access in a region gets narrower until other companies fill the gap ([[where-to-get-bsv]]). Affected customers need to follow the steps for getting their money out ([[exchange-closes-my-funds]]). And everyone is reminded why it matters who holds your coins ([[custodial-vs-own-wallet]]). These consequences are real. None of them comes from the technology itself.
 
 ## Sources
 

@@ -1,6 +1,6 @@
 # Flavour: branded versions
 
-A "flavour" is a skin over this corpus — an EB Labs help page, a partner site, a marketing hand-out built by the agency (Bopper), a printed FAQ. The deal that makes sharing possible:
+A "flavour" is a skin over this corpus — a partner help page, a marketing hand-out built by the agency (Bopper), a printed FAQ. The deal that makes sharing possible:
 
 ## A flavour MAY
 

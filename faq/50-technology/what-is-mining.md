@@ -4,20 +4,20 @@ question: "What is mining?"
 category: 50-technology
 tags: [technology, mining, proof-of-work]
 level: beginner
-updated: 2026-07-03
+updated: 2026-07-06
 sources:
   - https://bsvblockchain.org/
 ---
 
-**Short answer.** Mining is the competitive work of bundling transactions into blocks and attaching them to the chain. Processors race to solve a costly computational puzzle; the winner publishes the next block and collects the reward — transaction fees plus newly issued coins. The cost is the security: rewriting history would mean redoing that work against the whole network's ongoing effort.
+**Short answer.** Mining is the work of adding everyone's payments to the BSV Blockchain's permanent record. Companies compete to bundle recent payments together and attach them to the record. Winning takes real, costly computing work. The winner is paid: the payment fees, plus a set amount of newly issued coins. That cost is what keeps the record safe — rewriting history would mean redoing all that work while everyone else keeps adding to the record.
 
 ## More detail
 
-The puzzle ("proof of work") has no meaning in itself — its point is to be expensive to solve and instant to verify. That asymmetry turns electricity and hardware into a security budget: an attacker wanting to alter a past block would need to redo its work *and* outpace everyone else building forward ([[what-is-a-blockchain]]), which gets more hopeless with every added block. That's why more confirmations mean more settled ([[how-do-transactions-work]]).
+The computing work has no meaning in itself. Its point is to be expensive to do and instant to check. That turns electricity and machines into a kind of security deposit. Anyone wanting to change an old entry would have to redo its work *and* keep pace with everyone else adding new entries ([[what-is-a-blockchain]]) — a race that gets more hopeless with every addition. That is why a payment counts as more settled the longer it has been in the record ([[how-do-transactions-work]]).
 
-Economically, mining is a business, not a hobby: industrial operators ([[who-runs-the-bsv-network]]) invest in hardware and power, and are paid in fees plus a per-block issuance of new coins that halves on a fixed schedule — meaning fee revenue must carry the system long-term. BSV's design bets on that explicitly: huge transaction volumes at tiny per-transaction fees ([[what-is-scaling]], [[what-are-fees]]) rather than few transactions at high fees.
+Mining is a business, not a hobby. Large professional companies ([[who-runs-the-bsv-network]]) invest in machines and electricity. They earn the fees plus a set number of new coins for each bundle they add — and that number halves on a fixed schedule. So in the long run, fees must pay for the system. BSV plans for that openly: very many payments at tiny fees each ([[what-is-scaling]], [[what-are-fees]]), rather than a few payments at high fees.
 
-"Mining" is a mildly misleading name — nothing is dug up. It's transaction processing with a built-in security deposit, and the coins are issuance on a schedule, not treasure found.
+The name is a little misleading — nothing is dug up. Mining is really payment processing with a built-in security deposit, and the new coins are released on a schedule, not treasure found.
 
 ## Sources
 

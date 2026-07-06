@@ -4,20 +4,20 @@ question: "What does 'scaling' mean, and what is BSV's approach?"
 category: 50-technology
 tags: [technology, scaling, blocks]
 level: beginner
-updated: 2026-07-03
+updated: 2026-07-06
 sources:
   - https://bsvblockchain.org/
 ---
 
-**Short answer.** Scaling is a blockchain's ability to handle growing transaction volume. BSV's approach is "big blocks": no protocol-fixed limit on block size, so capacity grows with demand and hardware, keeping fees tiny at any volume. Other chains cap block size and route volume elsewhere — the design disagreement that produced BSV in the first place.
+**Short answer.** "Scaling" means a payment system's ability to handle more and more payments as it grows. BSV's approach: payments are added to the record in bundles, and BSV puts no fixed limit on how big a bundle can be. Capacity grows with demand and with better computers, and fees stay tiny at any volume. Other chains cap the bundle size and send the extra traffic elsewhere. That disagreement is what created BSV in the first place.
 
 ## More detail
 
-The constraint is simple arithmetic: blocks arrive at a roughly fixed rhythm, so block size sets transactions-per-second. Keep blocks small and the chain stays light to run but space becomes scarce — users bid up fees when it's busy. Let blocks grow and capacity is abundant — fees stay near zero ([[what-are-fees]]) — but processing big blocks demands serious infrastructure, pushing network operation toward professional data-center operators ([[who-runs-the-bsv-network]]).
+The trade-off is simple arithmetic. Bundles are added at a roughly steady rhythm, so the bundle size sets how many payments per second the system can handle. Keep bundles small and the system is light to run, but space runs short — when it's busy, users bid against each other and fees rise. Let bundles grow and there is room for everyone, so fees stay near zero ([[what-are-fees]]) — but handling big bundles takes serious equipment, so the network ends up run by professional data-center companies ([[who-runs-the-bsv-network]]).
 
-That trade-off split the original Bitcoin community ([[how-did-bsv-start]]): BTC chose small blocks with additional layers on top; BSV chose unbounded on-chain scale, accepting professionalized infrastructure as the cost ([[bitcoin-vs-bsv]]). BSV's current engineering effort, the Teranode node implementation, targets throughput in the range of a million transactions per second — capacity intended for payment-network and data workloads ([[data-on-chain]]).
+That trade-off split the original Bitcoin community ([[how-did-bsv-start]]). BTC chose small bundles, with extra systems layered on top. BSV chose unlimited room on the chain itself, accepting professional infrastructure as the cost ([[bitcoin-vs-bsv]]). BSV's current engineering project, called Teranode, aims at capacity in the range of a million payments per second — enough for payment-network use and for record-keeping ([[data-on-chain]]).
 
-Why a beginner should care at all: capacity determines what the chain is *for*. Dollar-fee chains suit large, infrequent settlements. Sub-cent-fee chains make micropayments and per-event data recording economical — different tools shaped by that one design choice.
+Why this matters to an ordinary user: capacity decides what the chain is *for*. Chains where a payment costs dollars suit large, occasional transfers. Chains where a payment costs under a cent make tiny payments and everyday record-keeping affordable. Different tools — shaped by that one design choice.
 
 ## Sources
 

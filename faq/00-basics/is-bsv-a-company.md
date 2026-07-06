@@ -4,22 +4,22 @@ question: "Is BSV a company?"
 category: 00-basics
 tags: [basics, ecosystem]
 level: beginner
-updated: 2026-07-03
+updated: 2026-07-06
 sources:
   - https://bsvblockchain.org/
 ---
 
-**Short answer.** No. BSV is a public network, like the internet's email system — technology that many independent parties run and build on. There are companies *in* the ecosystem (exchanges, wallet makers, app builders) and a Swiss non-profit association that stewards the protocol, but no company owns BSV, issues it, or can shut it down.
+**Short answer.** No. BSV is a public network, like the internet's email system — technology that many independent parties run and build on. There are companies that work *with* BSV — exchanges, wallet makers, app builders — and a Swiss non-profit association that looks after the system's rules. But no company owns BSV, issues it, or can switch it off.
 
 ## More detail
 
-This distinction resolves a whole family of common confusions, so it's worth making precise:
+Keeping three groups apart clears up a whole family of common confusions:
 
-- **The network** is run by independent transaction processors ([[who-runs-the-bsv-network]]) located in many countries. Anyone meeting the technical requirements can participate; no permission is needed.
-- **The BSV Association** ([[what-is-the-bsv-association]]) is a Swiss non-profit that maintains the protocol software and promotes the ecosystem — a steward, not an owner ([[bsva-controls-bsv]]).
-- **Businesses** — exchanges like the ones where BSV trades, wallet providers, application companies — are independent firms making their own commercial and compliance decisions ([[ecosystem-who-is-who]]).
+- **The network** is run by independent companies that process the transactions ([[who-runs-the-bsv-network]]), located in many countries. Anyone who meets the technical requirements can take part; no permission is needed.
+- **The BSV Association** ([[what-is-the-bsv-association]]) is a Swiss non-profit. It maintains the software that sets the network's rules and promotes the wider community of businesses building on BSV — a caretaker, not an owner ([[bsva-controls-bsv]]).
+- **Businesses** — the exchanges where BSV trades, wallet providers, app companies — are independent firms. They make their own commercial decisions and follow their own legal requirements ([[ecosystem-who-is-who]]).
 
-Why it matters: when a business in the ecosystem has a problem — an exchange fails to obtain a required license ([[orange-gateway-mica]]), a wallet app shuts down — that is a company event, not a network event. The blockchain keeps operating, and coins in self-custody ([[custodial-vs-own-wallet]]) are unaffected ([[exchange-problems-mean-bsv-problems]]).
+Why does this matter? When one of these businesses has a problem — say an exchange fails to get a required license ([[orange-gateway-mica]]), or a wallet app shuts down — that is a company event, not a network event. The blockchain keeps running. Coins you hold with your own keys ([[custodial-vs-own-wallet]]) are unaffected ([[exchange-problems-mean-bsv-problems]]).
 
 ## Sources
 

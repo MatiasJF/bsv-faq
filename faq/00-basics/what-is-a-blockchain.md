@@ -4,20 +4,20 @@ question: "What is a blockchain, in plain words?"
 category: 00-basics
 tags: [basics, technology]
 level: beginner
-updated: 2026-07-03
+updated: 2026-07-06
 sources:
   - https://bsvblockchain.org/
 ---
 
-**Short answer.** A blockchain is a shared record book kept by many independent computers at the same time. Everyone sees the same entries, new entries are added in batches ("blocks"), and once added, entries are practically impossible to alter without everyone noticing. That's the whole trick: a public record no single party controls.
+**Short answer.** A blockchain is a shared record book kept by many independent computers at the same time. Everyone sees the same entries. New entries are added in batches, called "blocks." Once an entry is in, it is practically impossible to change without everyone noticing. That is the whole trick: a public record that no single party controls.
 
 ## More detail
 
-Think of a ledger — a book of "who paid whom, when." Normally one institution keeps it, and you trust that institution. A blockchain distributes that job: thousands of computers each hold a full copy, and they follow shared rules to agree on every new entry.
+Picture a book that records "who paid whom, and when." Normally one institution — a bank, say — keeps that book, and you trust the institution. A blockchain shares the job out instead: thousands of computers each hold a full copy, and they follow shared rules to agree on every new entry.
 
-New transactions are collected into a block, and each block is cryptographically linked to the previous one — hence "chain." Changing an old entry would break the links and be immediately obvious to every other participant, which is what makes the record tamper-evident.
+New payments are gathered into a block. Each block is locked to the one before it — like pages that are numbered and sealed in order. That is the "chain." Changing an old entry would break the seals, and every other participant would spot it at once. That is what keeps the record honest.
 
-Adding blocks is the job of specialized operators ([[what-is-mining]]) who are paid in fees and newly issued coins for doing the work honestly. The result is a record that is public, append-only, and not dependent on trusting any single company — the property everything else ([[what-is-bsv]], [[data-on-chain]]) builds on.
+Adding new blocks is the job of specialist operators ([[what-is-mining]]). They are paid in fees and in newly created coins for doing the work honestly. The result is a record that is public, can only be added to, and does not depend on trusting any single company. Everything else ([[what-is-bsv]], [[data-on-chain]]) is built on that.
 
 ## Sources
 

@@ -21,7 +21,7 @@ One question per file, grouped by category under `faq/`:
 | `10-using-bsv` | Getting, storing, sending; what fees are |
 | `20-exchanges-access` | Listings, on/off-ramps, what happens when an exchange closes |
 | `30-regulation` | MiCA and friends in plain words; who regulates what |
-| `40-ecosystem` | Who's who: BSV Association, EB Labs, independent companies — and what each does *not* do |
+| `40-ecosystem` | Who's who: the BSV Association and the independent companies around BSV — and what each does *not* do |
 | `50-technology` | Scaling, SPV, data on chain — beginner level |
 | `60-misconceptions` | Common myths, neutrally corrected |
 | `70-incidents` | Explainers for specific events, each from primary sources |
@@ -34,7 +34,7 @@ This repo is the **single source of truth**; skins consume it:
 
 - **Chatbot**: one file per question = one retrieval chunk. See `flavours/chatbot.md`.
   A working retrieval-only demo lives in `flavours/chatbot-demo/` (`python3 build.py && open index.html`).
-- **Branded versions** (EB Labs, partner sites, marketing): may restyle, may select subsets, may never alter facts or neutrality. Rules in `flavours/branding.md`.
+- **Branded versions** (partner sites, marketing): may restyle, may select subsets, may never alter facts or neutrality. Rules in `flavours/branding.md`.
 
 ## Editing rules
 

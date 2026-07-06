@@ -4,20 +4,20 @@ question: "Are blockchain payments anonymous?"
 category: 60-misconceptions
 tags: [misconceptions, privacy, transactions]
 level: beginner
-updated: 2026-07-03
+updated: 2026-07-06
 sources:
   - https://bsvblockchain.org/
 ---
 
-**Short answer.** No — closer to the opposite. Every BSV transaction is public and permanent: amounts, addresses, and timing are visible to anyone, forever ([[how-do-transactions-work]]). What the chain omits is your *name* next to the address — until something links them. The accurate word is "pseudonymous," and the pseudonym is thinner than most people assume.
+**Short answer.** No — in fact, closer to the opposite. Every BSV payment is public and permanent. The amounts, the addresses, and the timing can be seen by anyone, forever ([[how-do-transactions-work]]). What the public record leaves out is your *name* next to your address — until something connects the two. The accurate word is "pseudonymous": a bit like writing under a pen name. And that pen name gives thinner cover than most people expect.
 
 ## More detail
 
-Where the linkage comes from in practice: licensed exchanges verify identity ([[why-do-licenses-matter]]), so coins moving between your verified account and your addresses connect the dots for anyone with lawful access to exchange records; merchants link addresses to deliveries and invoices; and chain analysis — following the public graph of transactions — is a mature industry serving investigators. Any address you reuse accumulates a visible history that's one identification away from being *your* visible history.
+How does a name get connected to an address in practice? Licensed exchanges check your identity ([[why-do-licenses-matter]]). So when coins move between your verified account and your own addresses, anyone with lawful access to the exchange's records can connect the dots. Shops connect addresses to deliveries and invoices. And there is a whole mature industry that traces the public trail of payments on behalf of investigators. Every address you reuse builds up a visible history. One identification later, that becomes *your* visible history.
 
-The practical framing for privacy: treat on-chain activity like activity in public. Lawful privacy practices exist — fresh addresses per payment, keeping sensitive data off-chain with only fingerprints anchored ([[data-on-chain]]) — but the ledger is not a hiding place, and investigators do use its traceability.
+The practical rule for privacy is simple: treat anything you do on the blockchain as done in public. There are lawful ways to keep some privacy. You can use a fresh address for each payment. You can keep sensitive information off the blockchain, storing only a digital fingerprint of it there ([[data-on-chain]]). But the public record is not a hiding place, and investigators do make use of how traceable it is.
 
-BSV's stated design position is to keep this transparency rather than obscure it, treating auditability and compatibility with regulation as goals of the system ([[what-is-bsv]]). Other blockchain projects make different design choices about privacy; describing that spectrum is beyond this FAQ's scope.
+BSV's stated position is to keep this openness rather than hide it. Being easy to audit, and fitting with regulation, are treated as goals of the system ([[what-is-bsv]]). Other blockchain projects make different choices about privacy. Describing that range is beyond what this FAQ covers.
 
 ## Sources
 

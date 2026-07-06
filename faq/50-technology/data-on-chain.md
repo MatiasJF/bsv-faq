@@ -4,22 +4,22 @@ question: "Can a blockchain store more than payments?"
 category: 50-technology
 tags: [technology, data, applications]
 level: beginner
-updated: 2026-07-03
+updated: 2026-07-06
 sources:
   - https://bsvblockchain.org/
 ---
 
-**Short answer.** Yes — transactions can carry arbitrary data, so the chain can serve as a public, timestamped, tamper-evident record for anything: documents, sensor readings, game events, supply-chain checkpoints. This is practical on BSV specifically because fees are a fraction of a cent ([[what-are-fees]]); on chains where a transaction costs dollars, per-record data writing is uneconomical.
+**Short answer.** Yes. Payments on the BSV Blockchain can carry extra information, so the chain can also work as a public record book — for documents, sensor readings, game events, or delivery checkpoints. Each entry is stamped with a date and time, and nobody can quietly rewrite it later. This is practical on BSV because each entry costs a fraction of a cent ([[what-are-fees]]). On chains where one entry costs dollars, keeping records this way is too expensive.
 
 ## More detail
 
-What "data on chain" buys that a database doesn't: **provable time and integrity**. A record written into a block is timestamped by the network, can't be quietly altered afterward ([[what-is-a-blockchain]]), and can be verified by anyone without trusting the writer ([[what-is-spv]]). A company's own database proves nothing to outsiders; a chain record does.
+What the chain offers that an ordinary company database does not: proof of *when*, and proof that nothing changed. A record written into the chain is time-stamped by the whole network and cannot be quietly altered afterwards ([[what-is-a-blockchain]]). Anyone can check it without having to trust the person who wrote it ([[what-is-spv]]). A company's own database proves nothing to outsiders. A chain record does.
 
-Typical patterns in the BSV ecosystem: notarization (proving a document existed unchanged at a date), audit trails (regulatory logs, supply-chain events), machine data (IoT sensors writing readings paired with micropayments), content and gaming (actions, ownership records, micro-earnings), and hybrid designs where bulk data lives off-chain with only fingerprints (hashes) anchored on-chain for integrity.
+Common uses on BSV: proving a document existed unchanged on a certain date, keeping audit trails for regulators or supply chains, machines recording their own readings alongside tiny payments, and games or content where actions, ownership, and small earnings are recorded. Another common design keeps the bulk of the data elsewhere and stores only a small digital fingerprint of it on the chain, to prove it was never changed.
 
-Boundaries, honestly stated: on-chain data is public and permanent — sensitive material belongs off-chain with only its hash anchored ([[is-blockchain-anonymous]]). Writing data costs per byte, so economics still shape design. And "on the blockchain" doesn't make a claim *true* — it proves *when* something was recorded and that it hasn't changed, not that its contents were accurate.
+Honest limits: whatever goes on the chain is public and permanent. Private material belongs elsewhere, with only its fingerprint on the chain ([[is-blockchain-anonymous]]). Writing costs money in proportion to how much you write, so cost still shapes what people record. And putting a claim on the chain does not make it *true* — it proves when it was recorded and that it hasn't changed, not that its contents were accurate.
 
-Building such applications requires no permission from anyone ([[how-is-bsv-developed]]).
+Anyone can build these kinds of applications without asking permission from anyone ([[how-is-bsv-developed]]).
 
 ## Sources
 

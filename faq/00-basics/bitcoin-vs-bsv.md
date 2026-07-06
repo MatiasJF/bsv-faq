@@ -4,27 +4,27 @@ question: "How is BSV different from Bitcoin (BTC)?"
 category: 00-basics
 tags: [basics, bitcoin, comparison]
 level: beginner
-updated: 2026-07-03
+updated: 2026-07-06
 sources:
   - https://bsvblockchain.org/
 ---
 
-**Short answer.** BTC and BSV share the same 2009 origin and similar core technology, but became separate networks through community splits ([[how-did-bsv-start]]) and now pursue different designs. BTC keeps blocks — the batches transactions are recorded in — deliberately small and positions itself mainly as a store of value; BSV removes the limit on block size and positions itself as a high-volume payments and data network. They are different coins on different chains — one cannot be sent to the other.
+**Short answer.** BTC and BSV started from the same place in 2009 and use similar core technology. Over time, disagreements split the community into separate networks ([[how-did-bsv-start]]), and the two now aim at different goals. BTC keeps its blocks — the batches payments are recorded in — deliberately small, and presents itself mainly as something to hold and store value in. BSV removes the limit on block size and presents itself as a network for very large numbers of payments and for data. They are different coins on different chains — you cannot send one to the other.
 
 ## More detail
 
-The practical differences a beginner will actually notice:
+The differences a beginner will actually notice:
 
 | | BTC | BSV |
 |---|---|---|
-| Design priority | Digital scarcity, settlement layer | High-throughput payments and data |
-| Block size | Limited (~a few MB) | No protocol-fixed limit ([[what-is-scaling]]) |
-| Typical fee | Varies with congestion, can be dollars | Fractions of a cent ([[what-are-fees]]) |
-| Typical uses | Holding, large settlements | Micropayments, on-chain data, applications ([[data-on-chain]]) |
+| Main aim | A scarce digital asset; settling large amounts | Handling many payments and data at low cost |
+| Block size | Limited (about a few MB) | No fixed limit built into the rules ([[what-is-scaling]]) |
+| Typical fee | Changes with how busy the network is; can be dollars | Fractions of a cent ([[what-are-fees]]) |
+| Typical uses | Holding, large settlements | Very small payments, records stored on the chain, applications ([[data-on-chain]]) |
 
-Both use proof-of-work mining ([[what-is-mining]]), both have public ledgers ([[is-blockchain-anonymous]]), and both descend from the same white paper — which is why the naming argument exists. Proponents of each chain claim theirs best represents "Bitcoin." This FAQ takes no side in that argument: we use the ticker names (BTC, BSV, BCH) because they are unambiguous, and we describe each network's stated goals rather than judging them ([[how-did-bsv-start]]).
+Both networks rely on the same kind of record-keeping work, called proof-of-work mining ([[what-is-mining]]). Both keep public records of payments ([[is-blockchain-anonymous]]). And both trace back to the same original design paper — which is why people argue over the name. Supporters of each chain say theirs best represents "Bitcoin." This FAQ takes no side in that argument. We use the ticker names (BTC, BSV, BCH) because they are clear, and we describe what each network says it aims to do, without judging ([[how-did-bsv-start]]).
 
-One operational warning that follows from them being separate networks: **always check which network you're using before sending.** Coins sent to an address on the wrong chain are typically unrecoverable.
+One practical warning follows from the two being separate networks: **always check which network you are using before you send.** Coins sent to an address on the wrong chain usually cannot be recovered.
 
 ## Sources
 

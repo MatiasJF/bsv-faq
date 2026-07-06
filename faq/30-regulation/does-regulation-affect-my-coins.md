@@ -4,23 +4,23 @@ question: "Does regulation affect the coins I already hold?"
 category: 30-regulation
 tags: [regulation, custody, wallets]
 level: beginner
-updated: 2026-07-03
+updated: 2026-07-06
 sources:
   - https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32023R1114
 ---
 
-**Short answer.** Regulation governs companies and their services, not the blockchain or your self-custodied coins. What it changes for you is the *service landscape*: which exchanges can serve your country, what identity checks apply when you trade, which ramps exist between coins and bank money. Coins in your own wallet remain yours and remain movable on the network regardless.
+**Short answer.** Rules for crypto apply to companies and the services they sell — not to the blockchain, and not to coins you keep in your own wallet. What changes for you is the shops around you: which exchanges may serve your country, what identity checks you go through when you trade, and where you can swap coins for bank money. Coins in your own wallet stay yours, and you can still move them on the network, whatever the rules say.
 
 ## More detail
 
-Untangling the layers helps:
+It helps to separate two layers.
 
-- **The network layer** — the blockchain itself, transaction processing, your wallet software — operates worldwide and isn't the object of licensing ([[who-runs-the-bsv-network]], [[what-is-a-casp]]). A rule like the EU's MiCA ([[what-is-mica]]) doesn't reach into the protocol.
-- **The service layer** — exchanges, custodians, ramps — is where regulation bites ([[why-do-licenses-matter]]). When rules tighten, this layer visibly reshuffles: some venues get licensed, some exit ([[orange-gateway-mica]]), users migrate.
+- **The network itself** — the blockchain, the payment processing, and your wallet app — runs worldwide, and it is not the thing licenses apply to ([[who-runs-the-bsv-network]], [[what-is-a-casp]]). A law like the EU's MiCA ([[what-is-mica]]) does not reach into the network.
+- **The businesses on top** — exchanges, companies that hold coins for customers, and services that swap coins for bank money — are what the rules do apply to ([[why-do-licenses-matter]]). When rules tighten, this layer visibly changes: some businesses get licensed, some leave ([[orange-gateway-mica]]), and customers move elsewhere.
 
-Two practical consequences follow. First, coins held on an exchange are exposed to that company's regulatory fate — a licensing failure there triggers a withdrawal process ([[exchange-closes-my-funds]]) — while coins in self-custody are not ([[custodial-vs-own-wallet]]). Second, even a self-custody holder feels regulation indirectly at the edges: converting to bank money goes through licensed ramps, and tax obligations on holdings or gains exist independently of custody (rules vary by country; this FAQ doesn't give tax advice).
+Two practical points follow. First, coins you keep on an exchange are tied to how that company stands with its regulator. If the company is not granted a license, there is a withdrawal process for getting your coins out ([[exchange-closes-my-funds]]). Coins in your own wallet are not tied to any company ([[custodial-vs-own-wallet]]). Second, even if you hold your own coins, you still feel the rules at the edges. Turning coins into bank money goes through licensed businesses. And tax on what you hold or gain applies no matter who keeps the coins — the rules vary by country, and this FAQ does not give tax advice.
 
-One boundary to state plainly: none of this means self-custody is a way around the law — it means the law regulates intermediaries, and when you hold your own keys there is no intermediary to regulate.
+One thing to say plainly: keeping your own coins is not a way around the law. The law covers the companies in the middle. When you hold your own keys, there is simply no company in the middle for it to cover.
 
 ## Sources
 

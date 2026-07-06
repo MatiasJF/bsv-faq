@@ -4,20 +4,20 @@ question: "What are 'on-ramps' and 'off-ramps'?"
 category: 20-exchanges-access
 tags: [exchanges, basics, fiat]
 level: beginner
-updated: 2026-07-03
+updated: 2026-07-06
 sources:
   - https://bsvblockchain.org/
 ---
 
-**Short answer.** An on-ramp is any service that converts regular money ("fiat" — euros, dollars, pounds) into a digital asset; an off-ramp converts back. Exchanges are the classic ramps, but card-payment purchase services and payment processors play the role too. Ramps are where blockchains meet banking — which makes them the most regulated part of the ecosystem.
+**Short answer.** An "on-ramp" is any service that turns regular money — euros, dollars, pounds, sometimes called "fiat" — into a digital coin. An "off-ramp" turns the coin back into regular money. Exchanges are the best-known ramps, but card-purchase services and payment companies play the same role. Ramps are the place where blockchains meet banks. That is why they face more regulation than any other part of this system.
 
 ## More detail
 
-The blockchain itself neither knows nor cares about banks: once you hold BSV, sending and receiving needs no ramp at all ([[sending-bsv-basics]]). Ramps matter at the boundary — turning salary into coins or coins into rent.
+The blockchain itself has nothing to do with banks. Once you hold BSV, you can send and receive it without any ramp at all ([[sending-bsv-basics]]). Ramps only matter at the edges — turning your salary into coins, or coins into rent money.
 
-Because that boundary touches bank accounts and customer funds, ramp providers carry the heaviest compliance load: identity checks, anti-money-laundering rules, and licenses per jurisdiction ([[who-regulates-crypto]], [[why-do-licenses-matter]]). That's why ramp availability is the part of the ecosystem that shifts most when regulation changes — the MiCA transition that ended in July 2026 being the current example ([[what-is-mica]], [[orange-gateway-mica]]).
+Because that edge touches bank accounts and customer money, ramp companies carry the heaviest rulebook: identity checks, anti-money-laundering rules, and licenses for each place they operate ([[who-regulates-crypto]], [[why-do-licenses-matter]]). This is why the ramps available to you shift the most when the rules change. The European transition to the MiCA rules, which ended in July 2026, is the current example ([[what-is-mica]], [[orange-gateway-mica]]).
 
-When a particular ramp disappears, the practical questions are covered in [[exchange-closes-my-funds]] and [[where-to-get-bsv]]: coins in self-custody are unaffected, and access continues through whichever licensed venues serve your region.
+If a ramp you use disappears, the practical questions are answered in [[exchange-closes-my-funds]] and [[where-to-get-bsv]]. Coins already in a wallet that only you control are not affected. And you can keep buying and selling through whichever licensed services serve your region.
 
 ## Sources
 

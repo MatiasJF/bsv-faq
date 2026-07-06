@@ -4,22 +4,24 @@ question: "What is BSV?"
 category: 00-basics
 tags: [basics]
 level: beginner
-updated: 2026-07-03
+updated: 2026-07-06
 sources:
   - https://bsvblockchain.org/
 ---
 
-**Short answer.** BSV is a public blockchain — a shared digital ledger that anyone can use to send payments and record data. It is designed around large capacity and very low fees, so it can handle high volumes of small transactions. "BSV" names both the blockchain and the digital coin used to pay for transactions on it.
+**Short answer.** BSV is digital money that works over the internet. You can use it to pay someone directly — like handing over cash, but online — and each payment costs less than a cent. It runs on a shared public record that no single company owns or controls.
 
 ## More detail
 
-A blockchain ([[what-is-a-blockchain]]) is a record of transactions kept by many independent computers at once, so no single company controls it or can quietly rewrite it. BSV is one such network. Its distinguishing design choice is scale: blocks (the batches transactions are grouped into) can be very large, which keeps the cost of a single transaction at a fraction of a cent.
+BSV is two things with the same name: the money itself, and the system that moves it.
 
-Because transactions are cheap, BSV is used for more than moving money: applications also record data on the chain — receipts, timestamps, supply-chain records, gaming events — anything that benefits from a public, tamper-evident log ([[data-on-chain]]).
+The system is called a blockchain ([[what-is-a-blockchain]]). Think of it as a public record book of payments. Many independent companies keep identical copies of that book and update it together, so nobody can quietly change what's written in it, and no single company can switch it off.
 
-The coin itself is the network's built-in unit of payment. You hold it in a wallet ([[what-is-a-wallet]]) and spend tiny amounts of it as fees ([[what-are-fees]]) when you transact.
+The money is the coin you keep in a wallet ([[what-is-a-wallet]]) — an app on your phone or computer. Sending BSV is a bit like sending an email: it goes straight to the other person, you pay a tiny fee ([[what-are-fees]]), and there is no bank in the middle.
 
-No company owns the BSV network. Independent operators run the machines that process transactions ([[who-runs-the-bsv-network]]), and a Swiss non-profit, the BSV Association, stewards the protocol ([[what-is-the-bsv-association]]).
+BSV was built to handle very large numbers of payments at once, which is what keeps each payment cheap. Because payments are so cheap, businesses also use BSV to store records that must not be quietly altered — receipts, time stamps, delivery logs ([[data-on-chain]]).
+
+No company owns BSV. Independent businesses process the payments ([[who-runs-the-bsv-network]]), and a Swiss non-profit, the BSV Association, looks after the system's rules ([[what-is-the-bsv-association]]).
 
 ## Sources
 

@@ -4,20 +4,20 @@ question: "What does it mean when a coin is 'listed' on an exchange?"
 category: 20-exchanges-access
 tags: [exchanges, listings]
 level: beginner
-updated: 2026-07-03
+updated: 2026-07-06
 sources:
   - https://bsvblockchain.org/
 ---
 
-**Short answer.** A listing means an exchange has decided to offer trading in that coin — it added BSV/dollar or BSV/euro pairs to its marketplace. It's a commercial decision by the exchange, reflecting its assessment of customer demand, technical integration effort, and regulatory comfort. More listings mean easier access for users in more places; they say nothing about the technology itself.
+**Short answer.** A listing means an exchange has decided to offer that coin in its shop. If BSV is "listed", you can buy and sell it there — for example swapping euros or dollars for BSV. It is the exchange's own business decision. More listings simply mean more places where people can buy and sell; they say nothing about how good or bad the technology is.
 
 ## More detail
 
-Getting listed involves the exchange integrating the coin's technology (wallets, deposits, withdrawals — for BSV this includes handling its high-throughput design), satisfying its own compliance review, and often ongoing commercial arrangements around liquidity — ensuring there are enough standing buy/sell orders for smooth trading, sometimes with specialist firms called market-makers.
+Think of an exchange as a shop that sells many different coins. Before putting a new coin on the shelf, the shop does some work: it connects the coin's technology to its systems (so deposits and withdrawals work), checks that offering it fits the rules it operates under, and makes sure there are always enough buyers and sellers for trading to run smoothly.
 
-Who does what, in the BSV ecosystem's case: exchanges decide listings; ecosystem organizations can *facilitate* — providing technical documentation, integration support, and commercial coordination. In BSV's case that facilitation is handled by EB Labs, a commercial venture working alongside the BSV Association ([[what-is-eb-labs]]) — while the decision always remains the exchange's own.
+The decision to list is always the exchange's own. Companies in the BSV world can help with the practical side — answering technical questions, providing documentation — but they cannot make the decision for the exchange.
 
-Delistings are the same decision in reverse ([[why-do-exchanges-delist]]): commercial or regulatory, made by the venue. Because listings come and go, where BSV trades varies by time and by country ([[where-to-get-bsv]]).
+Removing a coin from the shelf is called delisting, and it is the same kind of business decision in reverse ([[why-do-exchanges-delist]]). Because listings come and go, the places where you can buy BSV change over time and differ by country ([[where-to-get-bsv]]).
 
 ## Sources
 
