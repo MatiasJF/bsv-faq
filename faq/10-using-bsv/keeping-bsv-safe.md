@@ -4,7 +4,7 @@ question: "How do I keep my BSV safe?"
 category: 10-using-bsv
 tags: [using, security, scams]
 level: beginner
-updated: 2026-07-06
+updated: 2026-07-07
 sources:
   - https://bsvblockchain.org/
 ---
@@ -15,7 +15,7 @@ sources:
 
 Almost all losses come from tricksters, not from the system's locks failing. The same patterns come up again and again:
 
-- **Tricks to get your phrase.** Fake wallet updates, fake support agents, fake "verify your wallet" websites — anything that asks for your recovery phrase or private keys ([[what-are-private-keys]]). No honest company ever needs them. One rule with zero exceptions: the phrase goes into a wallet app you installed yourself, and nowhere else, ever.
+- **Tricks to get your phrase.** Fake wallet updates, fake support agents, fake "verify your wallet" websites — anything that asks for your recovery phrase or private keys. No honest company ever needs them. One rule with zero exceptions: the phrase goes into a wallet app you installed yourself, and nowhere else, ever.
 - **Sending to the wrong place.** Harmful software that secretly swaps the address you copied, addresses that look almost right, or the wrong network ([[sending-bsv-basics]]). Check a few characters at both ends of the address. When the amount matters, send a small test payment first.
 - **Offers that sound too good.** "Guaranteed returns", giveaways that promise to double your money, urgent insider tips. Blockchain payments cannot be undone, which makes them a scammer's favorite way to get paid — your skepticism is your refund policy.
 - **Recovery scams.** After any loss, "recovery services" appear. Coins lost with their keys cannot be recovered by anyone ([[lost-keys-recovery]]). Paying these services only adds a second loss.

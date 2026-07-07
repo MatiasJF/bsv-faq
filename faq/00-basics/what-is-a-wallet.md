@@ -4,12 +4,12 @@ question: "What is a wallet?"
 category: 00-basics
 tags: [basics, wallets]
 level: beginner
-updated: 2026-07-06
+updated: 2026-07-07
 sources:
   - https://bsvblockchain.org/
 ---
 
-**Short answer.** A wallet is an app that holds the keys to your coins and lets you send and receive them. The coins themselves live on the blockchain — the shared public record. The wallet holds your private keys ([[what-are-private-keys]]): the secret codes that prove the coins are yours and let you spend them.
+**Short answer.** A wallet is an app that holds the keys to your coins and lets you send and receive them. The coins themselves live on the blockchain — the shared public record. The wallet holds your private keys: the secret codes that prove the coins are yours and let you spend them.
 
 ## More detail
 

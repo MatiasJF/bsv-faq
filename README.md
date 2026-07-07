@@ -13,18 +13,18 @@ When something happens in the BSV ecosystem — an exchange closes, a regulation
 
 ## How it's organized
 
+**The live FAQ is deliberately small: a curated core of 11 questions** — only what a brand-new consumer would ask, the way a bank writes its customer FAQ. The core gets rock solid first; expansion is a deliberate decision, made later, one question at a time.
+
 One question per file, grouped by category under `faq/`:
 
 | Category | Contents |
 |---|---|
-| `00-basics` | What BSV is, how it differs, keys and wallets in plain words |
-| `10-using-bsv` | Getting, storing, sending; what fees are |
-| `20-exchanges-access` | Listings, on/off-ramps, what happens when an exchange closes |
-| `30-regulation` | MiCA and friends in plain words; who regulates what |
-| `40-ecosystem` | Who's who: the BSV Association and the independent companies around BSV — and what each does *not* do |
-| `50-technology` | Scaling, SPV, data on chain — beginner level |
-| `60-misconceptions` | Common myths, neutrally corrected |
-| `70-incidents` | Explainers for specific events, each from primary sources |
+| `00-basics` | What BSV is, how it differs from Bitcoin, what a wallet is |
+| `10-using-bsv` | Getting, sending, fees, keeping it safe, lost access, exchange vs. own wallet |
+| `20-exchanges-access` | What to do when an exchange holding your coins closes |
+| `40-ecosystem` | Who is behind BSV: the BSV Association |
+
+Drafted answers beyond the core (regulation, technology, misconceptions, ecosystem detail, incident explainers) live in `archive/` — out of the live FAQ and every flavour until deliberately promoted. See `archive/README.md`.
 
 Every file follows the format contract in `schema/question.md`: YAML frontmatter (id, question, category, tags, level, updated, sources) + a short answer + a longer answer + sources.
 
