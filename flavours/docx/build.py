@@ -104,12 +104,13 @@ def to_segments(text):
 
 
 def parse_body(body, questions):
-    """FAQ markdown body → list of block tuples for rendering.
+    """FAQ markdown body → (short_answer_segments, detail_blocks).
 
     Blocks: ("para", segments) | ("bullet", segments) | ("table", headers, rows)
-    The '## More detail' heading and the '## Sources' section are dropped —
-    the document is meant to read as one continuous answer per question.
+    The '## Sources' section is dropped; the '## More detail' heading marks
+    where the short answer ends and the long answer begins.
     """
+    short = None
     blocks = []
     lines = body.splitlines()
     i = 0
@@ -117,6 +118,11 @@ def parse_body(body, questions):
         line = lines[i].rstrip()
         if line.startswith("## Sources"):
             break
+        if line.startswith("**Short answer.**"):
+            text = line[len("**Short answer.**"):].strip()
+            short = to_segments(resolve_refs(text, questions))
+            i += 1
+            continue
         if not line or line.startswith("## "):
             i += 1
             continue
@@ -135,23 +141,36 @@ def parse_body(body, questions):
             continue
         blocks.append(("para", to_segments(resolve_refs(line, questions))))
         i += 1
-    return blocks
+    return short, blocks
 
 
 # ------------------------------------------------------------- XML builders
 
-def make_paragraph(style_id, segments):
+BRAND_NAVY = "1B1EA9"  # Heading1's color in the template
+
+
+def make_paragraph(style_id, segments, page_break=False, color=None, sz=None):
+    """segments: (text, bold, italic) or (text, bold, italic, color)."""
     p = etree.SubElement(etree.Element("dummy"), qn("w:p"))
     pPr = etree.SubElement(p, qn("w:pPr"))
     etree.SubElement(pPr, qn("w:pStyle")).set(qn("w:val"), style_id)
-    for text, bold, italic in segments:
+    if page_break:
+        etree.SubElement(pPr, qn("w:pageBreakBefore"))
+    for seg in segments:
+        text, bold, italic = seg[0], seg[1], seg[2]
+        seg_color = seg[3] if len(seg) > 3 else color
         r = etree.SubElement(p, qn("w:r"))
-        if bold or italic:
+        if bold or italic or seg_color or sz:
             rPr = etree.SubElement(r, qn("w:rPr"))
             if bold:
                 etree.SubElement(rPr, qn("w:b"))
             if italic:
                 etree.SubElement(rPr, qn("w:i"))
+            if seg_color:
+                etree.SubElement(rPr, qn("w:color")).set(qn("w:val"), seg_color)
+            if sz:
+                etree.SubElement(rPr, qn("w:sz")).set(qn("w:val"), str(sz))
+                etree.SubElement(rPr, qn("w:szCs")).set(qn("w:val"), str(sz))
         t = etree.SubElement(r, qn("w:t"))
         t.text = text
         if text and (text[0] == " " or text[-1] == " "):
@@ -314,11 +333,18 @@ def build():
     ]
 
     for _, heading, ids in SECTIONS:
-        content.append(make_paragraph("Heading1", [(heading, False, False)]))
+        content.append(make_paragraph("Heading1", [(heading, False, False)],
+                                      page_break=True, sz=44))
         for qid in ids:
             q = questions[qid]
-            content.append(make_paragraph("Heading2", [(q["question"], False, False)]))
-            for block in parse_body(q["body"], questions):
+            content.append(make_paragraph("Heading2", [(q["question"], False, False)],
+                                          color=BRAND_NAVY, sz=34))
+            short, blocks = parse_body(q["body"], questions)
+            content.append(make_paragraph(
+                "BSVAIntroduction",
+                [("Short answer — ", True, False, BRAND_NAVY)] + list(short)))
+            content.append(make_paragraph("Heading4", [("In more detail", False, False)]))
+            for block in blocks:
                 if block[0] == "para":
                     content.append(make_paragraph("Normal", block[1]))
                 elif block[0] == "bullet":
